@@ -1,24 +1,19 @@
 #bash script to print a pyramid pattern of "#"
 rows=7; 
-  
-for((m=1; m<=rows; m++)) 
+for((i=1; i<=rows; i++))
 do
-    for((a=i; a<=rows; a++)) 
-    do
-      echo -ne " "; 
-    done
-   
-    for((n=1; n<=m; n++)) 
-    do
-      echo -ne "#"; 
-    done
-  
-    for((i=1; i<m; i++)) 
-    do
-      echo -ne "#"; 
-    done
-    echo; 
+  for((j=1; j<=rows - i; j++))
+  do
+    echo -n " "
+  done
+  for((j=1; j<=2*i - 1; j++))
+  do
+    echo -n "#"
+  done
+  echo
 done
+
+ 
 
 
 
